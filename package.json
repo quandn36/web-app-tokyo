@@ -1,0 +1,26 @@
+{
+  "name": "web-app-tokyo",
+  "version": "1.0.0",
+  "description": "learning nodejs using express framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quandn36/web-app-tokyo.git"
+  },
+  "keywords": [
+    "express",
+    "nodejs",
+    "coders",
+    "tokyo",
+    "javascript"
+  ],
+  "author": "quandn36",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quandn36/web-app-tokyo/issues"
+  },
+  "homepage": "https://github.com/quandn36/web-app-tokyo#readme"
+}
