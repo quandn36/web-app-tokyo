@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/quandn36/web-app-tokyo/issues"
   },
-  "homepage": "https://github.com/quandn36/web-app-tokyo#readme"
+  "homepage": "https://github.com/quandn36/web-app-tokyo#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
