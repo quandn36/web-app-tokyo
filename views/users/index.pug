@@ -1,5 +1,6 @@
 .container
     h3 Form search
+    a( href="/users/create" ) New
     form( action='/users/search', method='get' )
         input( name='q', value='', placeholder='enter something...' )
         button( type='submit' ) Search

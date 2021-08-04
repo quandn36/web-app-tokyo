@@ -1,0 +1,9 @@
+h3 Create new user
+    form( action="/users/create", method="POST" )
+        label Name 
+        input( type="text", name="name", value='', placeholder="enter name" )
+        br
+        label Age
+        input( type="text", name="age", value='', placeholder="enter age" )
+        br
+        button( type="submit" ) Save
