@@ -1,0 +1,9 @@
+.container
+    h3 Form search
+    form( action='/users/search', method='get' )
+        input( name='q', value='', placeholder='enter something...' )
+        button( type='submit' ) Search
+    h3 Users list
+    ul
+        each user in users
+            li=user.name
