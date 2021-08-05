@@ -1,12 +1,15 @@
-.container
-    h3 Form search
-    a( href="/users/create" ) New
-    form( action='/users/search', method='get' )
-        input( name='q', value='', placeholder='enter something...' )
-        button( type='submit' ) Search
-    h3 Users list
-    ul
-        each user in users
-            li
-                span(style='font-size:23px')=user.name
-                a( href="/users/" + user.id) show
+extends ../layouts/main
+block content 
+    .container
+        h3 Form search
+        a( href="/users/create" ) New
+        form( action='/users/search', method='get' )
+            .form-group(class="d-flex")
+                input( class="form-control" name='q', value='', placeholder='enter something...' )
+                button( class="btn btn-primary", type='submit' ) Search
+        h3 Users list
+        ul
+            each user in users
+                li
+                    span(style='font-size:23px')=user.name
+                    a( href="/users/" + user.id) show

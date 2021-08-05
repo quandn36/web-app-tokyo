@@ -1,9 +1,13 @@
-h3 Create new user
-    form( action="/users/create", method="POST" )
-        label Name 
-        input( type="text", name="name", value='', placeholder="enter name" )
-        br
-        label Age
-        input( type="text", name="age", value='', placeholder="enter age" )
-        br
-        button( type="submit" ) Save
+extends ../layouts/main
+block content 
+    .container
+        h3 Create new user
+        form( action="/users/create", method="POST" )
+            .form-group 
+                label Name 
+                input( class="form-control",type="text", name="name", value='', placeholder="enter name" )
+            .form-group 
+                label Age
+                input( type="text", name="age", value='', placeholder="enter age", class="form-control" )
+            .form-group 
+                button( type="submit", class="btn btn-success") Save
