@@ -7,4 +7,6 @@
     h3 Users list
     ul
         each user in users
-            li=user.name
+            li
+                span(style='font-size:23px')=user.name
+                a( href="/users/" + user.id) show

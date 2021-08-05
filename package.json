@@ -2,9 +2,10 @@
   "name": "web-app-tokyo",
   "version": "1.0.0",
   "description": "learning nodejs using express framework",
-  "main": "index.js",
+  "main": "./index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --inspect ./index.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,11 @@
   "homepage": "https://github.com/quandn36/web-app-tokyo#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "pug": "^3.0.2"
+    "lowdb": "^1.0.0",
+    "pug": "^3.0.2",
+    "shortid": "^2.2.16"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
   }
 }
