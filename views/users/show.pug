@@ -1,4 +1,16 @@
 extends ../layouts/main
 block content 
-    h1 Detail user 
-        p=user.name
+    .container
+        h5 Detail user 
+        .user-table(style="margin-top: 10px; ")
+            table(class="table")
+                thead 
+                    tr
+                        th Name 
+                        th Age 
+                        th Phone
+                tbody 
+                    tr 
+                        td=user.name
+                        td=user.age
+                        td=user.phone

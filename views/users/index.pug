@@ -7,9 +7,18 @@ block content
             .form-group(class="d-flex")
                 input( class="form-control" name='q', value='', placeholder='enter something...' )
                 button( class="btn btn-primary", type='submit' ) Search
-        h3 Users list
-        ul
-            each user in users
-                li
-                    span(style='font-size:23px')=user.name
-                    a( href="/users/" + user.id) show
+        h3 Detail user 
+        .user-table(style="margin-top: 10px; ")
+            table(class="table")
+                thead 
+                    tr
+                        th Name 
+                        th Age 
+                        th action
+                tbody
+                each user in users
+                    tr 
+                        td=user.name
+                        td=user.age
+                        td
+                            a(href="/users/"+user.id) show

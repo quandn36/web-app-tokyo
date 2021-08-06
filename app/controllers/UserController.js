@@ -5,7 +5,7 @@ const shortId = require('shortid');
 users = db.get('users'); // khởi tạo object users để thao tác
 
 class UserController {
-    index(req, res, next) {
+    index(req, res) {
         res.render('users/index', { users: users.value() });
     }
 
@@ -22,18 +22,17 @@ class UserController {
         }
     }
 
-    create(req, res, next) {
+    create(req, res) {
         res.render('users/create');
     }
 
-    store(req, res, next) {
+    store(req, res) {
         req.body.id = shortId.generate(); // auto generate id
         users.push(req.body).write();
         res.redirect('/users');
-    
     }
 
-    show(req, res, next) {
+    show(req, res) {
         let id = req.params.id;
         const user = users.find({id: id}).value(); //tìm user trong file db
         res.render('users/show', { user: user });

@@ -2,12 +2,19 @@ extends ../layouts/main
 block content 
     .container
         h3 Create new user
+        if(errors)
+            each err in errors
+                .alert.alert-danger=err
+
         form( action="/users/create", method="POST" )
             .form-group 
                 label Name 
-                input( class="form-control",type="text", name="name", value='', placeholder="enter name" )
+                input( class="form-control",type="text", name="name", value=values ? values.name : "", placeholder="enter name ..." )
             .form-group 
                 label Age
-                input( type="text", name="age", value='', placeholder="enter age", class="form-control" )
+                input( type="text", name="age", value=values ? values.age : "", placeholder="enter age ...", class="form-control" )
+            .form-group 
+                label Phone
+                input( type="text", name="phone", value=values ? values.phone : "", placeholder="enter phone ...", class="form-control" )
             .form-group 
                 button( type="submit", class="btn btn-success") Save
