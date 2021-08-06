@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/quandn36/web-app-tokyo#readme",
   "dependencies": {
+    "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
     "express-validator": "^6.12.1",
     "lowdb": "^1.0.0",
