@@ -9,7 +9,8 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
           | User 
           span.sr-only (current)
       li.nav-item
-        a.nav-link(href='#') Link
+      
+        a.nav-link(href='/auth/logout') Logout
     form(action="/users/search", method="get").form-inline.my-2.my-lg-0
       input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search', name="q")
       button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search

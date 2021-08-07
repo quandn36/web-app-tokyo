@@ -4,25 +4,17 @@
       "name": "quan",
       "age": "23",
       "phone": "0989388290",
-      "id": "CddCSLYgz"
-    },
-    {
-      "name": "",
-      "age": "",
-      "phone": "",
-      "id": "XKmO1U2T5"
-    },
-    {
-      "name": "",
-      "age": "",
-      "phone": "",
-      "id": "8b1fZyrnq"
+      "id": "CddCSLYgz",
+      "email": "admin@gmail.com",
+      "password": "12345"
     },
     {
       "name": "test",
       "age": "12",
-      "phone": "123456789",
-      "id": "yYr5pL4UF"
+      "phone": "0989388290",
+      "id": "yYr5pL4UF",
+      "email": "admin1@gmail.com",
+      "password": "12345"
     }
   ]
 }

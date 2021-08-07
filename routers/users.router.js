@@ -1,12 +1,12 @@
 const express        = require('express');
-const route          = express.Router();
+const router         = express.Router();
 const userController = require('../app/controllers/UserController');
 const validate       = require('../app/requests/UserCreateRequest');
 
-route.get('/create', userController.create); // user create page
-route.post('/create',validate.dataCreateUser , userController.store); // save new user
-route.get('/search', userController.search); // user search page
-route.get('/:id', userController.show); // user show page
-route.get('/', userController.index);// homepage
+router.get('/create', userController.create); // user create page
+router.post('/create',validate.dataCreateUser , userController.store); // save new user
+router.get('/search', userController.search); // user search page
+router.get('/:id', userController.show); // user show page
+router.get('/', userController.index);// homepage
 
-module.exports = route;
+module.exports = router;

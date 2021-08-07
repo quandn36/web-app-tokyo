@@ -4,8 +4,14 @@ const app         = express();
 const port        = 3000;
 const pug         = require('pug');
 const path        = require('path');
-const userRoute   = require('./routers/users.router');
 const cookieParse = require('cookie-parser');
+
+const userRoute   = require('./routers/users.router');
+const authRoute = require('./routers/auth.router');
+
+// middlewares in use
+const middlewareAuth = require('./app/middlewares/login.middleware');
+
 
 // setting
 app.set('view engine', 'pug'); // set pug is view engine using for project
@@ -21,7 +27,9 @@ app.get('/', (req, res, next) => {
     res.render('index', {name: 'quan'});
 });
 
-app.use('/users', userRoute);
+
+app.use('/users',middlewareAuth.loginCheck , userRoute);
+app.use('/auth', authRoute);
 
 // port listening
 app.listen(port, () => {

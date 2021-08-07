@@ -1,0 +1,18 @@
+html
+    head 
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css")
+    body 
+    .container 
+        .row(style="justify-content: center; ")
+            .col-lg-6(style="margin: 30px; ")
+                if(errors)
+                    each err in errors
+                        .alert.alert-danger=err
+                form(action="", method="POST")
+                    .form-group
+                        label(for='email') Email
+                        input#username.form-control(type='email', placeholder='Enter email...', name="email", value=values?values.email:"")
+                    .form-group
+                        label(for='password') Password
+                        input#password.form-control(type='password', placeholder='Enter password...', name="password", value="")
+                    button.btn.btn-primary(type='submit') Login
