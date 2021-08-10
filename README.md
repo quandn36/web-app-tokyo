@@ -2,14 +2,13 @@
 learning nodejs using express framework
 
 using:
-
-express-framework
-template engine: pug
-path
-cookie-parser
-dotenv
-shortid
-md5
+    - express-framework
+    - template engine: pug
+    - path
+    - cookie-parser
+    - dotenv
+    - shortid
+    - md5
 
 
 

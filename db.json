@@ -37,6 +37,15 @@
       "image": "uploads/ddc09d88f133f690998ea9e1489d9b5e"
     }
   ],
+  "sessions": [
+    {
+      "sessionId": "UDEYGkHfT",
+      "cart": {
+        "4782dd26-5900-4f4d-94aa-cafd2ccc068a": 2,
+        "cc6b8e94-887d-430e-a09a-642f784b1c52": 3
+      }
+    }
+  ],
   "products": [
     {
       "id": "4782dd26-5900-4f4d-94aa-cafd2ccc068a",
