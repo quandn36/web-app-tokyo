@@ -1,7 +1,7 @@
 // require database
 const db      = require('../../database');
 const shortId = require('shortid');
-
+const md5     = require('md5');
 users = db.get('users'); // khởi tạo object users để thao tác
 
 class UserController {
@@ -27,8 +27,20 @@ class UserController {
     }
 
     store(req, res) {
-        req.body.id = shortId.generate(); // auto generate id
-        users.push(req.body).write();
+        // lay ra full path + extension name for image
+        const path      = req.file.path.split('/').slice(1).join('/');
+        // const ext       = req.file.mimetype.split('/').slice(1).join();
+
+        users.push({
+            id: shortId.generate(),
+            name: req.body.name,
+            age: req.body.age,
+            phone: req.body.phone,
+            email: req.body.email,
+            password: md5(req.body.password),
+            image: path,
+        }).write();
+        
         res.redirect('/users');
     }
 

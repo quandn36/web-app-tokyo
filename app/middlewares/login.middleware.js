@@ -2,12 +2,12 @@ const db = require('../../database');
 
 module.exports.loginCheck = function(req, res, next) {
     // nếu không tồn tại cookie user id thì về login
-    if(!req.cookies.loginID){
+    if(!req.signedCookies.loginID){
         res.redirect('/auth/login');
         return;
     }
 
-    const user = db.get('users').find({ id: req.cookies.loginID }).value();
+    const user = db.get('users').find({ id: req.signedCookies.loginID }).value();
 
     // nếu loginID không đúng trong database thì về login
     if(!user){

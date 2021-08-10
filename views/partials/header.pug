@@ -5,11 +5,10 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
   #navbarSupportedContent.collapse.navbar-collapse
     ul.navbar-nav.mr-auto
       li.nav-item.active
-        a.nav-link(href='/users')
-          | User 
-          span.sr-only (current)
+        a.nav-link(href='/users') User
+      li.nav-item.active
+        a.nav-link(href='/products') Products
       li.nav-item
-      
         a.nav-link(href='/auth/logout') Logout
     form(action="/users/search", method="get").form-inline.my-2.my-lg-0
       input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search', name="q")

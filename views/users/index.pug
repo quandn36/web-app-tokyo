@@ -12,12 +12,15 @@ block content
             table(class="table")
                 thead 
                     tr
+                        th Avatar
                         th Name 
                         th Age 
                         th action
                 tbody
                 each user in users
                     tr 
+                        td
+                            img(src=user.image, width='64')
                         td=user.name
                         td=user.age
                         td

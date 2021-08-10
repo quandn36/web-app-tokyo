@@ -1,0 +1,43 @@
+extends ../layouts/main
+block content 
+    .container
+        h3(style="margin-top: 15px;") Products list
+        .row
+            if(products)
+                each product in products
+                    .col-lg-3(style="margin-top: 15px; margin-bottom: 15px;")
+                        .card
+                            img.card-img-top(src='https://cdn.tgdd.vn/Products/Images/42/213031/iphone-12-violet-1-600x600.jpg', style="margin-top: 15px;")
+                            .card-body
+                                h5.card-title=product.name
+                                p.card-text-price(style="color:red; font-size: 23px; ")=product.price
+                                p.card-text=product.descriptions
+                                a.btn.btn-primary(href='/products/detail/'+product.id) Xem Ngay
+        
+        nav(aria-label='Page navigation example')
+            ul.pagination
+                li.page-item
+                    a.page-link(href='#') Previous
+                li.page-item
+                    a.page-link(href='/products?page=1') 1
+                li.page-item
+                    a.page-link(href='/products?page=2') 2
+                li.page-item
+                    a.page-link(href='/products?page=3') 3
+                li.page-item
+                    a.page-link(href='/products?page=4') 4
+                li.page-item
+                    a.page-link(href='/products?page=5') 5
+                li.page-item
+                    a.page-link(href='/products?page=6') 6
+                li.page-item
+                    a.page-link(href='/products?page=7') 7
+                li.page-item
+                    a.page-link(href='/products?page=8') 8
+                li.page-item
+                    a.page-link(href='/products?page=9') 9
+                li.page-item
+                    a.page-link(href='/products?page=10') 10
+                li.page-item
+                    a.page-link(href='#') Next
+            

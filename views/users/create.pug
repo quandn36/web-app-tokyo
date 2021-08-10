@@ -6,15 +6,54 @@ block content
             each err in errors
                 .alert.alert-danger=err
 
-        form( action="/users/create", method="POST" )
+        form(action="/users/create", method="POST", enctype="multipart/form-data")
+            .form-group 
+                label Image 
+                input(
+                    class="form-control-file",
+                    type="file", 
+                    name="image")
             .form-group 
                 label Name 
-                input( class="form-control",type="text", name="name", value=values ? values.name : "", placeholder="enter name ..." )
+                input(
+                    class="form-control",
+                    type="text", 
+                    name="name", 
+                    value=values ? values.name : "", 
+                    placeholder="enter name ..." )
+            .form-group 
+                label Email 
+                input(
+                    class="form-control",
+                    type="text", 
+                    name="email", 
+                    value=values ? values.email : "", 
+                    placeholder="enter email ..." )
+            .form-group 
+                label Password
+                input(
+                    class="form-control",
+                    ype="text", 
+                    name="password", 
+                    value=values ? values.password : "", 
+                    placeholder="enter password ..." )
             .form-group 
                 label Age
-                input( type="text", name="age", value=values ? values.age : "", placeholder="enter age ...", class="form-control" )
+                input(
+                    type="text", 
+                    name="age", 
+                    value=values ? values.age : "", 
+                    placeholder="enter age ...", 
+                    class="form-control" )
             .form-group 
                 label Phone
-                input( type="text", name="phone", value=values ? values.phone : "", placeholder="enter phone ...", class="form-control" )
+                input(
+                    type="text", 
+                    name="phone", 
+                    value=values ? values.phone : "", 
+                    placeholder="enter phone ...", 
+                    class="form-control" )
             .form-group 
-                button( type="submit", class="btn btn-success") Save
+                button(
+                    type="submit", 
+                    class="btn btn-success") Save

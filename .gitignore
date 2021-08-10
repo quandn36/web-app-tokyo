@@ -1,3 +1,5 @@
 ## an thu muc node modules
 node_modules/
+.env
+
 
